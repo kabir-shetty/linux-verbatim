@@ -1,0 +1,331 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="Ribbon.OnLoad">
+	<ribbon startFromScratch="false">
+		<officeMenu>
+			<button id="FlowSettings"
+  			insertAfterMso="FileSaveAsMenu"
+		    onAction="Ribbon.RibbonMain"
+            label="Verbatim Flow Settings"
+  	  	    description="Configure Verbatim Flow user settings." />   
+		</officeMenu>
+
+		<tabs>
+			<tab id="DebateTab" label="Debate" insertBeforeMso="TabHome" keytip="D">
+			    <group id="Speech" label="Speech" imageMso="RightArrow2">
+			        <box id="SpeechBox1" boxStyle="horizontal">
+                        <button id="SendToSpeechCursor"
+                        description="Send To Speech Document at cursor"
+                        imageMso="RightArrow2"
+                        screentip="Send To Speech (Cursor)"
+                        supertip="Sends selected cells to Speech document at cursor in Word. (` key)"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+                    <box id="SpeechBox2" boxStyle="horizontal">
+                        <button id="SendToSpeechEnd"
+                        description="Send To end Of Speech Document"
+                        imageMso="PageNextWord"
+                        screentip="Send To Speech (End)"
+                        supertip="Sends selected cells to end of Speech document in Word. (Alt + ` key)"
+                        onAction="Ribbon.RibbonMain" />
+					</box>
+					<box id="SpeechBox3" boxStyle="horizontal">
+					    <dynamicMenu id="QuickAnalytics"
+						description="Quick Analytics"
+						imageMso="AutoSummaryResummarize"
+						screentip="Quick Analytics"
+						supertip="Opens the Quick Analytics Menu."
+					    getContent="QuickAnalytics.GetQuickAnalyticsContent" />
+					</box>
+			    </group>
+                
+                <group id="Cells" label="Cells" imageMso="MergeCells">
+                    <box id="CellsBox1" boxStyle="horizontal">
+						<button id="InsertCellAbove"
+						label="Insert Cell Above"
+						description="Insert CellAbove"
+						imageMso="FillUp"
+						screentip="Insert CellAbove"
+						supertip="Insert Cell Above (F3)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="CellsBox2" boxStyle="horizontal">
+						<button id="InsertCellBelow"
+						label="Insert Cell Below"
+						description="Insert Cell Below"
+						imageMso="FillDown"
+						screentip="Insert Cell Below"
+						supertip="Insert Cell Below (Alt + F3)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="CellsBox3" boxStyle="horizontal">
+                        <button id="MergeCells"
+                        label="Merge Cells"
+                        description="Merge Cells"
+                        imageMso="MergeCells"
+                        screentip="Merge Cells"
+                        supertip="Merge Cells (F4)"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+                        
+                    <separator id="CellsSep1" />
+                        					    
+					<box id="CellsBox4" boxStyle="horizontal">
+						<button id="ToggleHighlighting"
+						label="Toggle Highlighting"
+						description="Toggle Highlighting"
+						imageMso="TextHighlightColorPicker"
+						screentip="Toggle Highlighting"
+						supertip="Toggle Highlighting (F11)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="CellsBox5" boxStyle="horizontal">
+						<button id="ToggleEvidence"
+						label="Toggle Evidence"
+						description="Toggle Evidence"
+						imageMso="BorderThickOutside"
+						screentip="Toggle Evidence"
+						supertip="Toggle Evidence (F7)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+
+                    <box id="CellsBox6" boxStyle="horizontal">
+                        <button id="ToggleGroup"
+                        label="Group"
+                        description="Group Cells"
+                        imageMso="SmartArtOrganizationChartRightHanging"
+                        screentip="Group Cells"
+                        supertip="Group Cells (F8)"
+                        onAction="Ribbon.RibbonMain" />
+                        
+                        <labelControl id="lblCellsSep1" label="|" enabled="false"/>
+                        
+                        <button id="ExtendArgument"
+                        label="Extend"
+                        description="Extend Argument"
+                        imageMso="TableColumnsInsertRight"
+                        screentip="Extend Argument"
+                        supertip="Extend Argument (F9)"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+                </group>
+                                
+                <group id="Rows" label="Rows" imageMso="TableRowsInsertAboveWord">
+                    <box id="RowsBox1" boxStyle="horizontal">
+						<button id="InsertRowAbove"
+						label="Insert Row Above"
+						description="Insert Row Above"
+						imageMso="TableRowsInsertAboveWord"
+						screentip="Insert Row Above"
+						supertip="Insert Row Above (F5)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="RowsBox2" boxStyle="horizontal">
+						<button id="InsertRowBelow"
+						label="Insert Row Below"
+						description="Insert Row Below"
+						imageMso="TableRowsInsertBelowWord"
+						screentip="Insert Row Below"
+						supertip="Insert Row Below (Alt + F5)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="RowsBox3" boxStyle="horizontal">
+						<button id="DeleteRow"
+						label="Delete Row"
+						description="Delete Row"
+						imageMso="RemoveDuplicates"
+						screentip="Delete Row"
+						supertip="Delete Row (Ctrl/Cmd + Alt + F5)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<separator id="RowsSep1" />
+					
+                    <box id="RowsBox4" boxStyle="horizontal">
+						<button id="MoveUp"
+						label="Move Selection Up"
+						description="Move Selection Up"
+						imageMso="UpArrow2"
+						screentip="Move Selection Up"
+						supertip="Move Selection Up (Ctrl/Cmd + Alt + Up)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+
+					<box id="RowsBox5" boxStyle="horizontal">
+						<button id="MoveDown"
+						label="Move Selection Down"
+						description="Move Selection Down"
+						imageMso="DownArrow2"
+						screentip="Move Selection Down"
+						supertip="Move Selection Down (Ctrl/Cmd + Alt + Down)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					
+					<box id="RowsBox6" boxStyle="horizontal">
+						<button id="GoToBottom"
+						label="Go To Bottom"
+						description="Move cursor to the bottom of the flow"
+						imageMso="HeaderFooterPositionHeaderFromTop"
+						screentip="Go To Bottom"
+						supertip="Go To Bottom (Ctrl/Cmd + Alt + Shift + Down)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+                </group>
+                    
+                <group id="Sheets" label="Sheets" imageMso="FileNew">
+					<box id="SheetsBox1" boxStyle="horizontal">
+						<button id="AddFlowAff"
+						label="Add Aff Flow"
+						description="Add Aff Flow"
+						imageMso="A"
+						screentip="Add Aff Flow"
+						supertip="Add Aff Flow (Ctrl + Alt + A)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<box id="SheetsBox2" boxStyle="horizontal">
+						<button id="AddFlowNeg"
+						label="Add Neg Flow"
+						description="Add Neg Flow"
+						imageMso="N"
+						screentip="Add Neg Flow"
+						supertip="Add Neg Flow (Ctrl + Alt + N)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					
+					<box id="SheetsBox3" boxStyle="horizontal">
+						<button id="AddFlowCX"
+						label="Add CX Flow"
+						description="Add CX Flow"
+						imageMso="X"
+						screentip="Add CX Flow"
+						supertip="Add CX Flow (Ctrl + Alt + X)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+					    
+					<separator id="SheetsSep1" />
+                                        
+                    <box id="SheetsBox4" boxStyle="horizontal">
+						<button id="DeleteEmptyFlows"
+						label="Delete Empty Flows"
+						description="Delete Empty Flows"
+						imageMso="TableOfContentsRemove"
+						screentip="Delete Empty Flows"
+						supertip="Delete Empty Flows"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+
+					<box id="SheetsBox5" boxStyle="horizontal">
+						<button id="DeleteFlow"
+						label="Delete Flow"
+						description="Delete Flow"
+						imageMso="Delete"
+						screentip="Delete Flow"
+						supertip="Delete Flow"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+
+					<box id="SheetsBox6" boxStyle="horizontal">	
+                        <button id="AutoScoutingInfo"
+                        label="Autofill Scouting Info"
+                        description="Autofill Scouting Info"
+                        imageMso="AutoCorrect"
+                        screentip="Autofill Scouting Info"
+                        supertip="Fills out the Info sheet with Aff and Neg positions based on the names of flows"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+                </group>
+
+			    <group id="Insert" label="Insert" imageMso="ParagraphSpaceBefore">
+					<box id="InsertBox1" boxStyle="horizontal">
+						<button id="EnterCell"
+						label="Enter Cell"
+						description="Enter Cell"
+						imageMso="CellsInsertSmart"
+						screentip="Enter Cell"
+						supertip="Enter Cell (F2)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+
+					<box id="InsertBox2" boxStyle="horizontal">
+						<toggleButton id="InsertMode"
+						label="Toggle Insert Mode"
+						description="Toggle insert mode"
+						imageMso="ParagraphSpaceBefore"
+						screentip="Insert Mode"
+						supertip="Toggles Insert Mode which makes the Enter key insert a linebreak in the current cell. You can move down to the next cell by pressing the down arrow. Press again to turn off."
+						getPressed="GetRibbonToggles"
+						onAction="Flow.ToggleInsertMode" />
+					</box>
+					    
+					<box id="InsertBox3" boxStyle="horizontal">
+						<button id="PasteAsText"
+						label="Paste Unformatted"
+						description="Paste Unformatted"
+						imageMso="PasteTextOnly"
+						screentip="Paste Unformatted"
+						supertip="Paste Unformatted (F6 or Ctrl/Cmd + Alt + 6)"
+						onAction="Ribbon.RibbonMain" />
+					</box>
+                </group>
+
+			    <group id="View" label="View" imageMso="WatchWindow">
+			        <box id="ViewBox1" boxStyle="horizontal">
+                        <button idMso="ZoomCurrent100" label=" " />
+                        <button idMso="ZoomDialog" label=" " />
+                        <button idMso="ZoomIn" label=" " />
+                        <button idMso="ZoomOut" label=" " />
+                    </box>
+                    <box id="ViewBox2" boxStyle="horizontal">
+                        <dynamicMenu id="SwitchSpeech"
+                        label="Switch Speech"
+                        description="Switch Speech" 
+                        imageMso="FillRight"
+                        supertip="Moves the cursor to the top of the selected speech in all sheets"
+                        getContent="UI.GetSwitchSpeechContent" />
+                    </box>
+                    <box id="ViewBox3" boxStyle="horizontal">
+                        <button id="SplitWithWord"
+                        label="Split With Word"
+                        description="Split screen with Word"
+                        image="arrange"
+                        screentip="Split screen with Word"
+                        supertip="Split screen with Word"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+                </group>
+
+			    <group id="Settings" label="Settings" imageMso="AddInManager">
+			        <box id="SettingsBox1" boxStyle="horizontal">
+                        <button id="CheatSheet"
+                        size="large"
+                        label="Cheat Sheet"
+                        description="Cheat Sheet"
+                        imageMso="AdvertisePublishAs"
+                        screentip="Shortcut Cheat Sheet"
+                        supertip="Opens a cheat sheet with all the Verbatim keyboard shortcuts for easy reference (F12)"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+
+                    <box id="SettingsBox2" boxStyle="horizontal">
+                        <button id="FlowSettings2"
+                        size="large"
+                        label="Settings"
+                        description="Verbatim Flow Settings"
+                        imageMso="AddInManager"
+                        screentip="Settings"
+                        supertip="Verbatim Flow Seettings"
+                        onAction="Ribbon.RibbonMain" />
+                    </box>
+
+					<dialogBoxLauncher>
+						<button id="FlowSettings1" onAction="Ribbon.RibbonMain" supertip="Verbatim Flow Settings" />
+					</dialogBoxLauncher>
+                </group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
