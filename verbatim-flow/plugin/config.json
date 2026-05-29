@@ -1,0 +1,22 @@
+{
+    "name": "Verbatim Flow",
+    "guid": "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AE}",
+    "baseUrl": "",
+    "variations": [
+      {
+        "description": "Verbatim Flow",
+        "url": "index.html",
+        "icons": [],
+        "isViewer": false,
+        "EditorsSupport": ["cell"],
+        "isVisual": true,
+        "isModal": false,
+        "type": "background",
+        "initDataType": "none",
+        "initData": "",
+        "isUpdateOleOnResize": true,
+        "buttons": [],
+        "events" : ["onToolbarMenuClick"]
+      }
+    ]
+  }
