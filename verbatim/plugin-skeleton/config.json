@@ -11,7 +11,7 @@
         "EditorsSupport": ["word"],
         "isVisual": true,
         "isModal": false,
-        "isInsideMode": false,
+        "type": "background",
         "initDataType": "none",
         "initData": "",
         "isUpdateOleOnResize": true,
