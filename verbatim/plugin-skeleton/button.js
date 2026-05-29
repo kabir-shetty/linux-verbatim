@@ -1,3 +1,5 @@
+console.log("button.js loaded");
+
 function getToolbarItems() {
     let items = {
       guid: window.Asc.plugin.info.guid,
