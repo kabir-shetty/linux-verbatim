@@ -6,7 +6,13 @@ window.Asc.plugin.init = function () {
           tabs: [{
             id: "tab_1",
             text: "Insert options",
-            items: []
+            items: [
+                {
+                    id: "button_1",
+                    type: "button",
+                    text: "this shit pmo"
+                }
+            ]
           }]
         };
     
@@ -14,5 +20,5 @@ window.Asc.plugin.init = function () {
     };
 
     window.Asc.plugin.executeMethod("InputText", ["button.js loaded"]);
-    this.executeMethod("AddToolbarMenuItem", [getToolbarItems()]);
+    window.Asc.plugin.executeMethod("AddToolbarMenuItem", [getToolbarItems()]);
 }
