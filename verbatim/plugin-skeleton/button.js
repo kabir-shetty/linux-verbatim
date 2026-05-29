@@ -1,4 +1,4 @@
-console.log("button.js loaded");
+window.Asc.plugin.executeMethod("InputText", ["button.js loaded"]);
 
 function getToolbarItems() {
     let items = {
