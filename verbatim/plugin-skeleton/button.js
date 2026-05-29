@@ -11,3 +11,7 @@ function getToolbarItems() {
 
     return items;
 };
+
+window.Asc.plugin.init = function () {
+    this.executeMethod("AddToolbarMenuItem", [getToolbarItems()]);
+}
