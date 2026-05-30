@@ -1,22 +1,22 @@
-window.Asc.plugin.init = function () {
-    function getToolbarItems() {
-        let items = {
-          guid: window.Asc.plugin.info.guid,
-          tabs: [{
-            id: "tab_1",
-            text: "Insert options",
-            items: [
-                {
-                    id: "button_1",
-                    type: "button",
-                    text: "this shit pmo"
-                }
-            ]
-          }]
-        };
-    
-        return items;
-    };
+function getToolbarItems() {
+  let items = {
+    guid: window.Asc.plugin.info.guid,
+    tabs: [{
+      id: "ribbon",
+      text: "Verbatim",
+      items: [
+          {
+              id: "button_1",
+              type: "button",
+              text: "idk lowk"
+          }
+      ]
+    }]
+  };
 
+  return items;
+};
+
+window.Asc.plugin.init = function () {
     window.Asc.plugin.executeMethod("AddToolbarMenuItem", [getToolbarItems()]);
 }
